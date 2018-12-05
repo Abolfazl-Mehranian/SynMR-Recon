@@ -38,7 +38,7 @@ for i = 1:length(io.dataset)
     data.centerOfkSpaceMask = data.ftKspaceData(:,:,:,1)~=0;
     
     sensOpt.null = 0;
-    mrObj = mrReconClass1(sensOpt,data,hdr);
+    mrObj = mrReconClass(sensOpt,data,hdr);
     % is undersampled
     mrObj.kUnderSampling.is = 1;
     % set reference affine transfromation obtained from nifti files
