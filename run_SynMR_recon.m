@@ -100,7 +100,7 @@ opt.SENSE_niter = [4,4,4];
 opt.MrRegularizationParameter = [15,15,15];
 opt.message = ['"MPRAGE-VD-x3" "MPRAGE-VD-x14","T2PREP-VD-x14"'];
 
-vNew = synRecon_01(mrObjs,opt);
+vNew = synRecon(mrObjs,opt);
 % save 
 for i = 1:length(id)
     [MrInfo,MrNifti] = getNiftiDataInfo(io.dataset(id(i)).nii);
